@@ -12,15 +12,17 @@ namespace BellStates {
         }
     }
 
+    @EntryPoint()
+    // Demonstrates properties of quantum superposition and entanglement via the setQubitState() function and quantum gates.
     operation testBellState(count: Int, initial: Result) : (Int, Int) {
-        mutable num_ones = 0;
-        mutable num_zeros = 0;
+        mutable num_ones = 0; // number of |0⟩ states
+        mutable num_zeros = 0; // numbber of |1⟩ states
 
+        // Allocates 1 qubit for use, and then releases it at the end of execution.
         using(qubit = Qubit()) {
 
             for(test in 1..count) {
                 setQubitState(initial, qubit);
-
                 let measurement = M(qubit);
 
                 // Count the number of occurences of the |1⟩ state
@@ -28,12 +30,10 @@ namespace BellStates {
                     set num_ones += 1;
                 }
             }
-
             setQubitState(Zero, qubit);
         }
 
         set num_zeros = count - num_ones;
-
 
         // Return the number of times the states |0⟩ and |1⟩ were observed.
         Message("Test results (# of 0s, # of 1s): ");
