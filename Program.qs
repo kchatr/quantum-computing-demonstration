@@ -14,30 +14,39 @@ namespace BellStates {
 
     @EntryPoint()
     // Demonstrates properties of quantum superposition and entanglement via the setQubitState() function and quantum gates.
-    operation testBellState(count: Int, initial: Result) : (Int, Int) {
+    operation testBellState(count: Int, initial: Result) : (Int, Int, Int) {
         mutable num_ones = 0; // number of |0⟩ states
         mutable num_zeros = 0; // numbber of |1⟩ states
+        mutable entangle = 0; // confirms the number of occurences where both qubits are entangled
 
         // Allocates 1 qubit for use, and then releases it at the end of execution.
-        using(qubit = Qubit()) {
+        using((qubit_0, qubit_1) = (Qubit(), Qubit())) {
 
             for(test in 1..count) {
-                setQubitState(initial, qubit);
-                let measurement = M(qubit);
+                setQubitState(initial, qubit_0);
+                setQubitState(Zero, qubit_1);
+                H(qubit_0); // Performs the Hadamard operation on qubit
+                CNOT(qubit_0, qubit_1); // Executes a CNOT gate on both qubits
+                let measurement = M(qubit_0);
+
+                if(M(qubit_1) == measurement) {
+                    set entangle += 1;
+                }
 
                 // Count the number of occurences of the |1⟩ state
                 if(measurement == One) {
                     set num_ones += 1;
                 }
             }
-            setQubitState(Zero, qubit);
+            setQubitState(Zero, qubit_0);
+            setQubitState(Zero, qubit_1);
         }
 
         set num_zeros = count - num_ones;
 
         // Return the number of times the states |0⟩ and |1⟩ were observed.
-        Message("Test results (# of 0s, # of 1s): ");
-        return(num_zeros, num_ones);
+        Message("Test results: (# of 0s, # of 1s, # of agreements between 2 entangled qubits)");
+        return(num_zeros, num_ones, entangle);
 
     } 
 }
