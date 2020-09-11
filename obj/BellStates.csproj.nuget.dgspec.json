@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj": {}
+    "c:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj": {
+    "c:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj",
+        "projectUniqueName": "c:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj",
         "projectName": "BellStates",
-        "projectPath": "C:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj",
+        "projectPath": "c:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj",
         "packagesPath": "C:\\Users\\cha_k\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Quantum Programming\\BellStates\\obj\\",
+        "outputPath": "c:\\Projects\\Quantum Programming\\BellStates\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cha_k\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -45,7 +45,7 @@ namespace BellStates {
         set num_zeros = count - num_ones;
 
         // Return the number of times the states |0⟩ and |1⟩ were observed.
-        Message("Test results: (# of 0s, # of 1s, # of agreements between 2 entangled qubits)");
+        Message("Test results: (# of qubits with state |0⟩ upon collapse, # of qubits with state |0⟩ upon collapse, # of agreements between 2 entangled qubits)");
         return(num_zeros, num_ones, entangle);
 
     } 

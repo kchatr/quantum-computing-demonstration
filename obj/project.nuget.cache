@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vd3ZAO2fkshnSfCFDcnYLXkhZ46REPKWygq75+05+plKXjcV4MNWrRo/FfUrnX5BD1rd2gcypOkbfdmKMQI/7g==",
+  "dgSpecHash": "pXP8Z2Ze/GoNcnAl9TrH3LU+R3dy/XdQicnxTI5ndB5lBtj/s4SfEDt8JJ/ayJOBnyUVWAL2I2+IIt9P3s/JPw==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj",
+  "projectFilePath": "c:\\Projects\\Quantum Programming\\BellStates\\BellStates.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cha_k\\.nuget\\packages\\azure.core\\1.0.1\\azure.core.1.0.1.nupkg.sha512",
     "C:\\Users\\cha_k\\.nuget\\packages\\azure.identity\\1.1.0\\azure.identity.1.1.0.nupkg.sha512",
